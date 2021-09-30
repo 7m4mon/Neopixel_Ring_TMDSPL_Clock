@@ -21,3 +21,6 @@ Added two compile options:
 
 Article(Japanese):  
 http://nomulabo.com/neopixcel_ring_clock/
+
+Train Model Controller(Japanese):  
+https://github.com/7m4mon/train_model_controller_with_dengo_mascon
