@@ -1367,6 +1367,11 @@ void clockSCREEN::changeDisplayMode(byte mode) {
   }
 }
 
+#ifdef NO_SHOW_DATE_AND_ALARM
+#define EDIT_ENTRY_MAX 2
+#else
+#define EDIT_ENTRY_MAX 11
+#endif
 //------------------------------------------ class clock setup -------------------------------------------------
 class clockSetupSCREEN: public SCREEN {
   public:
@@ -1379,7 +1384,7 @@ class clockSetupSCREEN: public SCREEN {
     }
     virtual SCREEN* menu(void) {
       ++edit_entity;
-      if (edit_entity >= 11) edit_entity = 0;
+      if (edit_entity >= EDIT_ENTRY_MAX) edit_entity = 0;
       refresh = true;
       return this;
     }
